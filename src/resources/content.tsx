@@ -2,14 +2,15 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  firstName: "Derd",
+  lastName: "Si Paling Brewer",
+  name: `Derd`,
+  role: "Home Brewer",
+  avatar: "/images/avatar2.png",
+  email: "derdtime@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  // languages: ["English", "Bahasa"],
+  languages: ["Review Product", "Coffee Shop", "Brewing", "Recipes", "Education", "Entertain"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -23,27 +24,27 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
+    link: "https://www.instagram.com/derd.time",
+    essential: true,
+  },
+  {
+    name: "Tiktok",
+    icon: "tiktok",
+    link: "https://www.tiktok.com/@derdtime",
+    essential: true,
+  },
+  {
+    name: "Youtube",
+    icon: "youtube",
+    link: "https://www.youtube.com/@derdtime",
+    essential: true,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/@derd.time",
     essential: true,
   },
   {
@@ -60,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Hi, I’m Derd. Let's Rawr!</>,
   featured: {
     display: true,
     title: (
@@ -76,7 +77,8 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Brewing <Text as="span" size="xl" weight="strong">stories</Text>, one cup at a time.<br />
+    Coffee is more than a drink-it’s <Text as="span" size="xl" weight="strong">ritual</Text>, <Text as="span" size="xl" weight="strong">exploration</Text>, and <Text as="span" size="xl" weight="strong">quiet moments</Text> worth sharing. Welcome to my coffee journal.
 </>
   ),
 };
@@ -95,35 +97,35 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://api.whatsapp.com/send?phone=6285175626262",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        A space where I document coffee moments—from experimenting with brew methods to discovering beans that leave lasting impressions.
+        I’m not here to chase perfection. Just to enjoy the process, one cup at a time.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Coffee Journey",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Exploring, Learning, and Creating",
+        timeframe: "Feb 2026 - Present",
+        role: "Home Brewer x Buzzer Kopi 🔥",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            A continued exploration of specialty coffee.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            From experimenting with new brew methods to learning more about beans, origins, and extraction techniques, coffee has become both a daily ritual and an ongoing study.
+          </>,
+          <>
+            At the same time, I’ve been building consistency in creating content sharing discoveries, brew sessions, and the small moments that make coffee meaningful.
           </>,
         ],
         images: [
@@ -137,96 +139,160 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Building Derd Account",
+        timeframe: "Nov 2025 — Jan 2026",
+        role: "Content Creator 🦖",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            A new space to document the journey.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Derd was created as a personal coffee journal a place to archive brews, thoughts, and quiet moments around coffee.
+          </>,
+          <>
+            What began as simple documentation slowly became a creative outlet for sharing my growing curiosity.
+          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+          // {
+          //   src: "/images/tiktok-captured.png",
+          //   alt: "Tiktok Account",
+          //   width: 16,
+          //   height: 9,
+          // },
+          // {
+          //   src: "/images/ig-captured.png",
+          //   alt: "Instagram Account",
+          //   width: 16,
+          //   height: 9,
+          // },
+          // {
+          //   src: "/images/youtube-captured.png",
+          //   alt: "Youtube Account",
+          //   width: 16,
+          //   height: 9,
+          // },
+        ],
+      },
+      {
+        company: "First Steps into Specialty Coffee",
+        timeframe: "Aug 2025 — Oct 2025",
+        role: "Home Brewer ☕",
+        achievements: [
+          <>
+            The beginning of my specialty coffee journey.
+          </>,
+          <>
+            It started with my first bag of specialty beans and my first brewing tool: a moka pot.
+          </>,
+          <>
+            These early months were all about learning understanding flavor, adapting my palate, and discovering how different brewing choices could completely change a cup.
           </>,
         ],
         images: [],
       },
     ],
   },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Brewing Setup",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Grinder",
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Timemore C3S",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Kova N600",
           },
         ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Dripper",
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Hario V60",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Origami Air",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Suji Wave",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+      },
+      {
+        title: "Kettle",
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Latina Bango 2",
           },
         ],
+      },
+      {
+        title: "Scale",
+        tags: [
+          {
+            name: "Unbranded",
+          },
+        ],
+      },
+      {
+        title: "Espresso Machine",
+        tags: [
+          {
+            name: "Guererro TBK01 Pro Lite",
+          },
+        ],
+      },
+      // {
+      //   title: "Next.js",
+      //   description: (
+      //     <>Building next gen apps with Next.js + Once UI + Supabase.</>
+      //   ),
+      //   tags: [
+      //     {
+      //       name: "JavaScript",
+      //       icon: "javascript",
+      //     },
+      //     {
+      //       name: "Next.js",
+      //       icon: "nextjs",
+      //     },
+      //     {
+      //       name: "Supabase",
+      //       icon: "supabase",
+      //     },
+      //   ],
+      //   // optional: leave the array empty if you don't want to display images
+      //   images: [
+      //     {
+      //       src: "/images/projects/project-01/cover-04.jpg",
+      //       alt: "Project image",
+      //       width: 16,
+      //       height: 9,
+      //     },
+      //   ],
+      // },
+    ],
+  },
+  studies: {
+    display: true, // set to false to hide this section
+    title: "Coffee Preferences",
+    institutions: [
+      {
+        name: "Favorite brew method",
+        description: <>V60 pour-over because i enjoy the clarity and control it offers a slow ritual that highlights delicate flavors and makes every cup feel intentional.</>,
+      },
+      {
+        name: "Favorite processing method",
+        description: <>Natural and Honey process</>,
+      },
+      {
+        name: "Favorite coffee moments",
+        description: <>Quiet mornings, fresh beans, and the first aroma after bloom.</>,
       },
     ],
   },
@@ -243,9 +309,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Archive",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Create and edit by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

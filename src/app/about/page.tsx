@@ -99,9 +99,14 @@ export default function About() {
               {person.location}
             </Row>
             {person.languages && person.languages.length > 0 && (
-              <Row wrap gap="8">
+              <Row
+                wrap
+                gap="8"
+                horizontal="center"
+                style={{ maxWidth: "220px" }}
+              >
                 {person.languages.map((language, index) => (
-                  <Tag key={index} size="l">
+                  <Tag key={index} size="m">
                     {language}
                   </Tag>
                 ))}
@@ -132,8 +137,8 @@ export default function About() {
                   backdropFilter: "blur(var(--static-space-1))",
                 }}
               >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Icon paddingLeft="12" name="whatsapp" onBackground="brand-weak" />
+                <Row paddingX="8">Collaborate</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
