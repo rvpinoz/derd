@@ -137,7 +137,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
             <CustomMDX source={post.content} />
           </Column>
           
-          <ShareSection 
+          {/* <ShareSection 
             title={post.metadata.title} 
             url={`${baseURL}${blog.path}/${post.slug}`} 
           />
@@ -148,7 +148,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
               Recent posts
             </Text>
             <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" />
-          </Column>
+          </Column> */}
           <ScrollToHash />
         </Column>
       </Row>
