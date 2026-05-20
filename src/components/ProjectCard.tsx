@@ -44,17 +44,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         fillWidth
         paddingX="s"
         paddingTop="12"
-        paddingBottom="24"
+        paddingBottom="12"
         gap="l"
       >
-        {title && (
+        {/* {title && (
           <Flex flex={5}>
             <Heading as="h2" wrap="balance" variant="heading-strong-xl">
               {title}
             </Heading>
           </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+        )} */}
+        {/* {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
@@ -83,7 +83,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               )}
             </Flex>
           </Column>
-        )}
+        )} */}
       </Flex>
     </Column>
   );

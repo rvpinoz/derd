@@ -28,7 +28,7 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" gap="l" paddingY="12" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -44,7 +44,7 @@ export default function Home() {
       />
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
-          {home.featured.display && (
+          {/* {home.featured.display && (
             <RevealFx
               fillWidth
               horizontal="center"
@@ -64,7 +64,7 @@ export default function Home() {
                 <Row paddingY="2">{home.featured.title}</Row>
               </Badge>
             </RevealFx>
-          )}
+          )} */}
           <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
