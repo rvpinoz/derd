@@ -41,8 +41,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         }))}
         play={{
           auto: true,
-          interval: 3500,
-          progress: true,
+          interval: 5000,
         }}
       />
       <Flex

@@ -18,6 +18,38 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
 
+  const [name, setName] = useState("");
+const [message, setMessage] = useState("");
+const [loading, setLoading] = useState(false);
+const [success, setSuccess] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email,
+      message,
+    }),
+  });
+
+  const data = await res.json();
+
+  setLoading(false);
+
+  if (data.success) {
+    setSuccess(true);
+    setEmail("");
+    setMessage("");
+  }
+  };
+
   const validateEmail = (email: string): boolean => {
     if (email === "") {
       return true;
@@ -28,17 +60,16 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setEmail(value);
+  const value = e.target.value;
 
-    if (!validateEmail(value)) {
-      setError("Please enter a valid email address.");
-    } else {
-      setError("");
-    }
+  setEmail(value);
+
+  if (!validateEmail(value)) {
+    setError("Please enter a valid email address.");
+  } else {
+    setError("");
+  }
   };
-
-  const debouncedHandleChange = debounce(handleChange, 2000);
 
   const handleBlur = () => {
     setTouched(true);
@@ -113,22 +144,19 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
         </Text>
       </Column>
       <form
+        onSubmit={handleSubmit}
         style={{
           width: "100%",
           display: "flex",
           justifyContent: "center",
         }}
-        action={mailchimp.action}
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
       >
-        <Row
-          id="mc_embed_signup_scroll"
+        <Column
           fillWidth
-          maxWidth={24}
-          s={{ direction: "column" }}
-          gap="8"
+          maxWidth="xs"
+          gap="12"
+          horizontal="center"
+          align="center"
         >
           <Input
             formNoValidate
@@ -136,48 +164,49 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
             name="EMAIL"
             type="email"
             placeholder="Email"
+            value={email}
             required
-            onChange={(e) => {
-              if (error) {
-                handleChange(e);
-              } else {
-                debouncedHandleChange(e);
-              }
-            }}
+            onChange={handleChange}
             onBlur={handleBlur}
             errorMessage={error}
           />
-          <div style={{ display: "none" }}>
-            <input
-              type="checkbox"
-              readOnly
-              name="group[3492][1]"
-              id="mce-group[3492]-3492-0"
-              value=""
-              checked
-            />
-          </div>
-          <div id="mce-responses" className="clearfalse">
-            <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-            <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
-          </div>
-          <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
-            <input
-              type="text"
-              readOnly
-              name="b_c1a5a210340eb6c7bff33b2ba_0462d244aa"
-              tabIndex={-1}
-              value=""
-            />
-          </div>
-          <div className="clear">
-            <Row height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Get in Touch
-              </Button>
-            </Row>
-          </div>
-        </Row>
+
+          <textarea
+            placeholder="Tell me about your idea or collaboration"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            rows={5}
+            required
+            style={{
+              width: "100%",
+              padding: "12px",
+              borderRadius: "12px",
+              background: "transparent",
+              border: "1px solid var(--neutral-alpha-medium)",
+              color: "inherit",
+              resize: "vertical",
+              fontFamily: "inherit",
+            }}
+          />
+
+          <Button
+      type="submit"
+      size="m"
+      fillWidth
+      disabled={loading}
+    >
+      {loading ? "Sending..." : "Get in Touch"}
+    </Button>
+
+          {success && (
+            <Text
+              onBackground="success-strong"
+              align="center"
+            >
+              Message sent successfully ☕
+            </Text>
+          )}
+        </Column>
       </form>
     </Column>
   );
