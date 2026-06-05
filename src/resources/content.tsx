@@ -32,7 +32,7 @@ const social: Social = [
   {
     name: "Tiktok",
     icon: "tiktok",
-    link: "https://www.tiktok.com/@derdtime",
+    link: "https://www.tiktok.com/@derd.time",
     essential: true,
   },
   {
