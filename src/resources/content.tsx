@@ -57,10 +57,10 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home.png",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `${person.name} | Si Paling Brewer`,
+  description: `Brewing stories, one cup at a time. Coffee is more than a drink-it’s ritual, exploration, and quiet moments worth sharing. Welcome to my coffee journal.`,
   headline: <>Hi, I’m Derd. Let's Rawr!</>,
   featured: {
     display: true,
